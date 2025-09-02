@@ -1,0 +1,430 @@
+[
+    {
+      "name": "Python",
+      "icon": "SiPython",
+      "category": "Data Science",
+      "tags": ["language", "analysis", "ML"],
+      "track": "data",
+      "era": "2019-2021 Foundations",
+      "year": 2020,
+      "type": "tool"
+    },
+    {
+      "name": "NumPy",
+      "icon": "SiNumpy",
+      "category": "Data Science",
+      "tags": ["math", "arrays"],
+      "track": "data",
+      "era": "2019-2021 Foundations",
+      "year": 2020,
+      "type": "tool"
+    },
+    {
+      "name": "Jupyter Notebook",
+      "icon": "SiJupyter",
+      "category": "Data Science",
+      "tags": ["notebooks", "interactive"],
+      "track": "data",
+      "era": "2019-2021 Foundations",
+      "year": 2020,
+      "type": "tool"
+    },
+    {
+      "name": "SQL",
+      "icon": "SiMysql",
+      "category": "Databases",
+      "tags": ["queries"],
+      "track": "data",
+      "era": "2019-2021 Foundations",
+      "year": 2021,
+      "type": "tool"
+    },
+    {
+      "name": "LaTeX",
+      "icon": "SiLatex",
+      "category": "Other",
+      "tags": ["math", "equations"],
+      "track": "history",
+      "era": "2019-2021 Foundations",
+      "year": 2020,
+      "type": "tool"
+    },
+    {
+      "name": "Unix / CLI",
+      "icon": "SiGnubash",
+      "category": "Systems",
+      "tags": ["bash", "miller", "scripting"],
+      "track": "data",
+      "era": "2019-2021 Foundations",
+      "year": 2021,
+      "type": "tool"
+    },
+  
+    {
+      "name": "Pandas",
+      "icon": "SiPandas",
+      "category": "Data Science",
+      "tags": ["dataframe", "ETL"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Scikit-learn",
+      "icon": "SiScikitlearn",
+      "category": "Data Science",
+      "tags": ["ML", "classifiers"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Google Colab",
+      "icon": "SiGooglecolab",
+      "category": "Data Science",
+      "tags": ["GPU", "ML"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Tableau",
+      "icon": "SiTableau",
+      "category": "Data Science",
+      "tags": ["dashboards"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "SiJavascript",
+      "category": "Web Development",
+      "tags": ["language"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "SiTypescript",
+      "category": "Web Development",
+      "tags": ["language"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "React",
+      "icon": "SiReact",
+      "category": "Web Development",
+      "tags": ["frontend"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Next.js",
+      "icon": "SiNextdotjs",
+      "category": "Web Development",
+      "tags": ["SSR", "frontend"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "SiTailwindcss",
+      "category": "Web Development",
+      "tags": ["styling"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Ant Design",
+      "icon": "SiAntdesign",
+      "category": "Web Development",
+      "tags": ["UI library"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "shadcn/ui",
+      "icon": "SiRadixui",
+      "category": "Web Development",
+      "tags": ["UI primitives"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Redux",
+      "icon": "SiRedux",
+      "category": "Web Development",
+      "tags": ["state management"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Zustand",
+      "icon": "SiReacttable",
+      "category": "Web Development",
+      "tags": ["state management"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+  
+    {
+      "name": "PostgreSQL",
+      "icon": "SiPostgresql",
+      "category": "Databases",
+      "tags": ["relational"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Node.js",
+      "icon": "SiNodedotjs",
+      "category": "Systems",
+      "tags": ["backend"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+    {
+      "name": "Vercel",
+      "icon": "SiVercel",
+      "category": "Systems",
+      "tags": ["deploy"],
+      "track": "data",
+      "era": "2022 Projects",
+      "year": 2022,
+      "type": "tool"
+    },
+  
+    {
+      "name": "ArcGIS",
+      "icon": "SiArcgis",
+      "category": "Geospatial",
+      "tags": ["mapping", "shapefiles"],
+      "track": "data",
+      "era": "2023 Geospatial Expansion",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Geopandas",
+      "icon": "SiPython",
+      "category": "Geospatial",
+      "tags": ["mapping", "dataframes"],
+      "track": "data",
+      "era": "2023 Geospatial Expansion",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "GeoJSON",
+      "icon": "SiJson",
+      "category": "Geospatial",
+      "tags": ["data format"],
+      "track": "data",
+      "era": "2023 Geospatial Expansion",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "PostGIS",
+      "icon": "SiPostgresql",
+      "category": "Databases",
+      "tags": ["spatial", "GIS"],
+      "track": "data",
+      "era": "2023 Geospatial Expansion",
+      "year": 2023,
+      "type": "tool"
+    },
+  
+    {
+      "name": "PyTorch",
+      "icon": "SiPytorch",
+      "category": "Data Science",
+      "tags": ["deep learning"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Three.js",
+      "icon": "SiThreedotjs",
+      "category": "Visualization",
+      "tags": ["3D graphics"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "React Three Fiber",
+      "icon": "SiReact",
+      "category": "Visualization",
+      "tags": ["3D graphics"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "drei",
+      "icon": "SiReact",
+      "category": "Visualization",
+      "tags": ["R3F helpers"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Victory Charts",
+      "icon": "SiVictory",
+      "category": "Visualization",
+      "tags": ["charts"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Plotly.js",
+      "icon": "SiPlotly",
+      "category": "Visualization",
+      "tags": ["charts"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Mermaid",
+      "icon": "SiMarkdown",
+      "category": "Visualization",
+      "tags": ["diagrams", "flowcharts"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Excalidraw",
+      "icon": "SiSketch",
+      "category": "Visualization",
+      "tags": ["diagrams", "collaboration"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "AWS",
+      "icon": "SiAmazonaws",
+      "category": "Systems",
+      "tags": ["cloud", "EC2", "S3"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Google Cloud Engine",
+      "icon": "SiGooglecloud",
+      "category": "Systems",
+      "tags": ["cloud", "compute"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Docker",
+      "icon": "SiDocker",
+      "category": "Systems",
+      "tags": ["containers", "devops"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2023,
+      "type": "tool"
+    },
+    {
+      "name": "Playwright",
+      "icon": "SiPlaywright",
+      "category": "Testing",
+      "tags": ["automation", "testing"],
+      "track": "data",
+      "era": "2023-2024 Advanced Work",
+      "year": 2024,
+      "type": "tool"
+    },
+  
+    {
+      "name": "The Prince",
+      "icon": "BookIcon",
+      "category": "History Reading",
+      "tags": ["political thought", "absolutism"],
+      "track": "history",
+      "era": "2022 Readings",
+      "year": 2022,
+      "type": "reading",
+      "author": "Niccolò Machiavelli"
+    },
+    {
+      "name": "Slavery and Freedom Essay",
+      "icon": "EditIcon",
+      "category": "History Writing",
+      "tags": ["slavery", "political rights"],
+      "track": "history",
+      "era": "2023 Atlantic World",
+      "year": 2023,
+      "type": "writing"
+    },
+    {
+      "name": "Constantine and the Tetrarchy",
+      "icon": "BookIcon",
+      "category": "History Reading",
+      "tags": ["late antiquity", "roman empire"],
+      "track": "history",
+      "era": "2023 Readings",
+      "year": 2023,
+      "type": "reading",
+      "author": "Timothy Barnes"
+    },
+    {
+      "name": "Enlightenment Thought Essay",
+      "icon": "EditIcon",
+      "category": "History Writing",
+      "tags": ["philosophy", "revolutions"],
+      "track": "history",
+      "era": "2024 Intellectual History",
+      "year": 2024,
+      "type": "writing"
+    }
+  ]
+  

@@ -1,103 +1,149 @@
 import Image from "next/image";
+import TechTicker from "../components/TechTicker";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-background transition-colors duration-300">
+      <section className="relative overflow-hidden min-h-screen flex items-center">
+        <div className="absolute inset-0 hero-gradient opacity-90" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 py-24 sm:py-32 text-white">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h1 className="text-4xl sm:text-6xl font-semibold drop-shadow">History & Data Science Portfolio</h1>
+              <p className="mt-4 text-white/85 text-lg sm:text-xl">Integrating historical research with data science to produce rigorous, evidence-based insights.</p>
+              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="card-base card-double-gradient card-double-gradient--history history-typography history-emphasis">
+                  <h3 className="text-xl font-semibold text-foreground">History</h3>
+                  <p className="mt-2 text-foreground/75">Archival research, textual analysis, and languages inform clear, evidence-based narratives and historiography.</p>
+                </div>
+                <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis">
+                  <h3 className="text-xl font-semibold text-foreground">Data Science</h3>
+                  <p className="mt-2 text-foreground/75">Statistical modeling, machine learning, and visualization to analyze complex sources and support historical insight.</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-10 lg:mt-0 flex justify-center lg:justify-end">
+              <div className="hero-image-depth inline-block">
+                <div className="relative w-full max-w-[750px] rounded-xl overflow-hidden border border-white/15 shadow-xxl">
+                  <Image
+                    src="/Vertical%20Hero2.jpg"
+                    alt="MJRobillard Vertical Hero2"
+                    width={380}
+                    height={520}
+                    sizes="(max-width: 1024px) 90vw, 680px"
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* TechTicker Section - Enhanced with new variants */}
+      <TechTicker variant="marquee" />
+      
+      {/* Demo of other variants - you can switch between them */}
+      {/* <TechTicker variant="collapsible" /> */}
+      {/* <TechTicker variant="dual-layer" /> */}
+
+      <section className="py-20 bg-muted transition-colors duration-300">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">Selected Work</h2>
+          <div className="timeline relative">
+            <div className="timeline-line" aria-hidden="true" />
+            <div className="space-y-16">
+              {/* Row 1 — History (Left) */}
+              <div className="relative grid md:grid-cols-2 gap-8 items-center timeline-item">
+                <div className="md:pr-16">
+                  <div className="bg-background rounded-xl p-6 border border-border-color history-emphasis transition-colors duration-300 hover:border-accent">
+                    <div className="text-sm text-accent font-mono mb-2">HISTORICAL RESEARCH</div>
+                    <h3 className="text-xl font-semibold mb-2">Byzantine Digital Humanities</h3>
+                    <p className="text-foreground/70 mb-4">Leading research on medieval manuscript digitization and network analysis of Byzantine trade routes.</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Paleography</span>
+                      <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Network Analysis</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden md:block" />
+                <span className="timeline-node timeline-node--lapiz absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" />
+                <span className="connector-right connector-right--copper" />
+                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-8 text-xs font-mono px-2 py-1 rounded-full bg-muted border border-border-color text-accent">2024</div>
+              </div>
+
+              {/* Row 2 — Data (Right) */}
+              <div className="relative grid md:grid-cols-2 gap-8 items-center timeline-item">
+                <div className="hidden md:block" />
+                <div className="md:pl-16">
+                  <div className="bg-background rounded-xl p-6 border border-border-color data-emphasis transition-colors duration-300 hover:border-accent">
+                    <div className="text-sm text-accent-2 font-mono mb-2">DATA SCIENCE</div>
+                    <h3 className="text-xl font-semibold mb-2">ML for Historical Analysis</h3>
+                    <p className="text-foreground/70 mb-4">Developing machine learning models for sentiment analysis in historical documents and computer vision systems.</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-accent-2 text-white text-xs rounded-full">Python</span>
+                      <span className="px-3 py-1 bg-accent-2 text-white text-xs rounded-full">TensorFlow</span>
+                    </div>
+                  </div>
+                </div>
+                <span className="timeline-node timeline-node--copper absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" />
+                <span className="connector-left connector-left--lapiz" />
+                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-8 text-xs font-mono px-2 py-1 rounded-full bg-muted border border-border-color text-accent-2">2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background transition-colors duration-300">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">Projects</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all history-emphasis">
+              <div className="text-sm text-accent-2 font-mono mb-2">HYBRID</div>
+              <h3 className="text-xl font-semibold mb-2">Byzantine Trade Networks</h3>
+              <p className="text-foreground/70 mb-4">Mapping 11th-century merchant routes using network analysis and archaeological evidence from Constantinople&apos;s harbor.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Network Analysis</span>
+                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Medieval History</span>
+              </div>
+            </div>
+            <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all history-emphasis">
+              <div className="text-sm text-accent-2 font-mono mb-2">HISTORY</div>
+              <h3 className="text-xl font-semibold mb-2">Codex of the Tin Coyote</h3>
+              <p className="text-foreground/70 mb-4">Deconstructing trickster narratives in Mesoamerican manuscripts and their influence on colonial resistance movements.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Indigenous Studies</span>
+                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Manuscript Analysis</span>
+              </div>
+            </div>
+            <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all data-emphasis">
+              <div className="text-sm text-accent-2 font-mono mb-2">DATA</div>
+              <h3 className="text-xl font-semibold mb-2">Verdigris Sentiment</h3>
+              <p className="text-foreground/70 mb-4">NLP analysis of emotional patterns in historical documents during periods of imperial decline and transformation.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">NLP</span>
+                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted border-t border-border-color transition-colors duration-300">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h3 className="text-xl font-mono mb-8 text-accent">TOOLS OF THE TRADE</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Paleography</span>
+            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Python</span>
+            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Archival Research</span>
+            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">React</span>
+            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Latin & Greek</span>
+            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Machine Learning</span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
