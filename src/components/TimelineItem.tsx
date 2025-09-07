@@ -54,6 +54,22 @@ interface TimelineItemProps {
 const TimelineItem: React.FC<TimelineItemProps> = ({ item, track, onClick }) => {
   const scale = useMotionValue(1);
   const cardRef = React.useRef<HTMLDivElement | null>(null);
+  const popoverRef = React.useRef<HTMLDivElement | null>(null);
+  const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(false);
+
+  React.useEffect(() => {
+    try {
+      const mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+      setPrefersReducedMotion(mql.matches);
+      const onChange = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
+      mql.addEventListener?.('change', onChange);
+      return () => mql.removeEventListener?.('change', onChange);
+    } catch {
+      // no-op for SSR or unsupported envs
+    }
+  }, []);
 
   React.useEffect(() => {
     let raf = 0;
@@ -73,6 +89,39 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ item, track, onClick }) => 
     raf = requestAnimationFrame(update);
     return () => cancelAnimationFrame(raf);
   }, [scale]);
+
+  // Close popover on outside click
+  React.useEffect(() => {
+    if (!isPopoverOpen) return;
+    const onDocClick = (e: MouseEvent) => {
+      if (!popoverRef.current) return;
+      if (popoverRef.current.contains(e.target as Node)) return;
+      setIsPopoverOpen(false);
+    };
+    document.addEventListener('mousedown', onDocClick);
+    return () => document.removeEventListener('mousedown', onDocClick);
+  }, [isPopoverOpen]);
+
+  // Minimal "Featured 2" carousel: prefer projects; fall back to top tags
+  const featureItems = React.useMemo(() => {
+    const fromProjects = Array.isArray(item.projects)
+      ? item.projects.map((p) => p.title).filter(Boolean)
+      : [];
+    const fromTags = Array.isArray(item.tags) ? item.tags : [];
+    const picks = (fromProjects.length > 0 ? fromProjects : fromTags).slice(0, 2);
+    return picks;
+  }, [item.projects, item.tags]);
+
+  const [featureIndex, setFeatureIndex] = React.useState(0);
+  React.useEffect(() => {
+    if (prefersReducedMotion) return;
+    if (featureItems.length <= 1) return;
+    if (isHovered) return; // pause on hover
+    const id = window.setInterval(() => {
+      setFeatureIndex((prev) => (prev + 1) % featureItems.length);
+    }, 6000);
+    return () => window.clearInterval(id);
+  }, [featureItems.length, isHovered, prefersReducedMotion]);
 
   const hasTags = Array.isArray(item.tags) && item.tags.length > 0;
 
@@ -129,6 +178,23 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ item, track, onClick }) => 
               {item.era ? <span>{item.era}</span> : null}
               {(item.projects && item.projects.length) ? <span>• {item.projects.length} project{item.projects.length > 1 ? 's' : ''}</span> : null}
             </div>
+            {featureItems.length > 0 && (
+              <div className="mt-1 text-[11px] leading-4">
+                <span className="opacity-70">Highlights:</span>{' '}
+                <span className="font-medium">{featureItems[featureIndex]}</span>
+                {featureItems.length > 1 && !prefersReducedMotion ? (
+                  <div className="relative h-[2px] bg-foreground/10 mt-1 rounded">
+                    <motion.div
+                      key={featureIndex}
+                      initial={{ width: 0 }}
+                      animate={{ width: '100%' }}
+                      transition={{ duration: 5.8, ease: 'linear' }}
+                      className="h-full bg-foreground/50 rounded"
+                    />
+                  </div>
+                ) : null}
+              </div>
+            )}
             {displayedTags.length > 0 && (
               <div className="mt-1">
                 <div className="flex flex-wrap gap-1" title={Array.isArray(item.tags) ? item.tags.join(', ') : undefined}>
@@ -138,7 +204,36 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ item, track, onClick }) => 
                     </span>
                   ))}
                   {remainingTagsCount > 0 && (
-                    <span className="text-[10px] opacity-70">+{remainingTagsCount}</span>
+                    <div className="relative inline-block" ref={popoverRef}>
+                      <button
+                        type="button"
+                        className="text-[10px] opacity-80 px-1 py-[1px] rounded hover:opacity-100 focus:outline-none focus-visible:ring-1 focus-visible:ring-foreground/40"
+                        aria-haspopup="dialog"
+                        aria-expanded={isPopoverOpen}
+                        onMouseEnter={() => setIsPopoverOpen(true)}
+                        onMouseLeave={() => setIsPopoverOpen(false)}
+                        onFocus={() => setIsPopoverOpen(true)}
+                        onBlur={() => setIsPopoverOpen(false)}
+                        onClick={() => setIsPopoverOpen((v) => !v)}
+                      >
+                        +{remainingTagsCount}
+                      </button>
+                      {isPopoverOpen && (
+                        <div
+                          role="dialog"
+                          className="absolute z-50 top-full right-0 mt-2 w-56 p-2 rounded-lg border border-border-color bg-background/95 backdrop-blur-md shadow-lg shadow-black/20"
+                        >
+                          <div className="text-[10px] uppercase tracking-wide opacity-70 mb-1">More tags</div>
+                          <div className="flex flex-wrap gap-1">
+                            {Array.isArray(item.tags) && item.tags.slice(3).map((t, idx) => (
+                              <span key={`${item.name}-tag-pop-${idx}`} className="text-[10px] px-2 py-[2px] rounded-full bg-black/20">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
@@ -154,6 +249,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ item, track, onClick }) => 
       ref={cardRef}
       style={{ scale }}
       className={commonClasses}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       onClick={onClick ? () => onClick(item) : undefined}
       aria-label={`${item.type}: ${item.name}`}
     >

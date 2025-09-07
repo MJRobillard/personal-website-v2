@@ -735,8 +735,9 @@ body {
 }
 
 .dark .timeline-line {
-  background: linear-gradient(180deg, var(--neon-lapiz) 0%, var(--lapiz-primary) 55%, var(--molten-copper) 100%);
-  box-shadow: 0 0 16px rgba(60, 132, 255, 0.15), 0 0 12px rgba(255, 118, 67, 0.08);
+  background: none;
+  background-color: var(--neon-lapiz);
+  box-shadow: none;
 }
 
 .timeline-node {
@@ -1175,6 +1176,7 @@ body {
 
 .light .tech-category {
   color: var(--volcanic-brown);
+  opacity: 0.9; /* increase contrast in light mode */
 }
 
 .dark .tech-category {
@@ -1195,6 +1197,11 @@ body {
 .light .tech-name:hover {
   color: var(--lapiz-primary);
 }
+.light .tech-subtitle {
+  color: var(--obsidian-gray);
+  opacity: 0.95; /* stronger readability in light mode */
+}
+
 
 .dark .tech-name {
   color: var(--tin-silver);

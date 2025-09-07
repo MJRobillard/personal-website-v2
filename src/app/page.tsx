@@ -43,6 +43,7 @@ export default function Home() {
 
       {/* TechTicker Section - Enhanced with new variants */}
       <TechTicker variant="marquee" />
+      <TechTicker variant="technologies" />
       
       {/* Demo of other variants - you can switch between them */}
       {/* <TechTicker variant="collapsible" /> */}
@@ -50,7 +51,7 @@ export default function Home() {
 
       <section className="py-20 bg-muted transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">Selected Work</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">What I'm working on now</h2>
           <div className="timeline relative">
             <div className="timeline-line" aria-hidden="true" />
             <div className="space-y-16">
@@ -58,7 +59,7 @@ export default function Home() {
               <div className="relative grid md:grid-cols-2 gap-8 items-center timeline-item">
                 <div className="md:pr-16">
                   <div className="bg-background rounded-xl p-6 border border-border-color history-emphasis transition-colors duration-300 hover:border-accent">
-                    <div className="text-sm text-accent font-mono mb-2">HISTORICAL RESEARCH</div>
+                    <div className="text-sm text-accent font-mono mb-2">HISTORICAL </div>
                     <h3 className="text-xl font-semibold mb-2">Byzantine Digital Humanities</h3>
                     <p className="text-foreground/70 mb-4">Leading research on medieval manuscript digitization and network analysis of Byzantine trade routes.</p>
                     <div className="flex flex-wrap gap-2">
