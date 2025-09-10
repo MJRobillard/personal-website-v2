@@ -8,20 +8,43 @@ export default function Home() {
         <div className="absolute inset-0 hero-gradient opacity-90" />
         <div className="relative z-10 mx-auto max-w-6xl px-4 py-24 sm:py-32 text-white">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <h1 className="text-4xl sm:text-6xl font-semibold drop-shadow">History & Data Science Portfolio</h1>
-              <p className="mt-4 text-white/85 text-lg sm:text-xl">Integrating historical research with data science to produce rigorous, evidence-based insights.</p>
-              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="card-base card-double-gradient card-double-gradient--history history-typography history-emphasis">
-                  <h3 className="text-xl font-semibold text-foreground">History</h3>
-                  <p className="mt-2 text-foreground/75">Archival research, textual analysis, and languages inform clear, evidence-based narratives and historiography.</p>
-                </div>
-                <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis">
-                  <h3 className="text-xl font-semibold text-foreground">Data Science</h3>
-                  <p className="mt-2 text-foreground/75">Statistical modeling, machine learning, and visualization to analyze complex sources and support historical insight.</p>
-                </div>
-              </div>
-            </div>
+          <div>
+          <h1 className="text-4xl sm:text-6xl font-semibold drop-shadow">
+  History & Data Science Portfolio
+</h1>
+<p className="mt-2 text-white/60 italic">
+(UC Berkeley 2026 build — patch notes pending)
+</p>
+
+
+  <p className="mt-4 text-white/85 text-lg sm:text-xl">
+    When does data become history? When does history become data? Are models historians?
+  </p>
+  <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+    
+    <div className="card-base card-double-gradient card-double-gradient--history history-typography history-emphasis">
+      <h3 className="text-xl font-semibold text-foreground">History</h3>
+      <p className="mt-2 text-foreground/75">
+        The first part of the scientific method. What’s been tried before, why it didn’t work, and what we can learn from it.
+      </p>
+      <p className="mt-2 text-foreground/60 italic">
+        (Or at the very least, a record of our bad ideas so we can laugh before repeating them.)
+      </p>
+    </div>
+    
+    <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis">
+      <h3 className="text-xl font-semibold text-foreground">Data Science</h3>
+      <p className="mt-2 text-foreground/75">
+        The testable half of the scientific method. Turn hypotheses into evidence, predict, classify, and more.
+      </p>
+      <p className="mt-2 text-foreground/60 italic">
+        (Or a ChatGPT wrapper doing horoscopes, overfit on Scorpios, dropout conveniently scheduled for Mercury retrograde.)
+      </p>
+    </div>
+    
+  </div>
+</div>
+
             <div className="mt-10 lg:mt-0 flex justify-center lg:justify-end">
               <div className="hero-image-depth inline-block">
                 <div className="relative w-full max-w-[750px] rounded-xl overflow-hidden border border-white/15 shadow-xxl">
