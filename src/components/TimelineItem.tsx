@@ -2,6 +2,7 @@
 
 import React from 'react';
 import * as SiIcons from 'react-icons/si';
+import { IconType } from 'react-icons';
 import { FaBookOpen, FaScroll, FaBook, FaMicrochip } from 'react-icons/fa';
 import { motion, useMotionValue } from 'framer-motion';
 
@@ -22,12 +23,12 @@ export interface TechnologyItem {
 
 const DynamicIcon: React.FC<{ iconName?: string; label: string }> = ({ iconName, label }) => {
   if (!iconName) return null;
-  const LibraryIcon = (SiIcons as any)[iconName];
+  const LibraryIcon = (SiIcons as unknown as Record<string, IconType | undefined>)[iconName];
   if (LibraryIcon) {
     return <LibraryIcon className="w-5 h-5 shrink-0" aria-label={`${label} icon`} />;
   }
   // Fallbacks for non-SimpleIcons identifiers used in data
-  const fallbackMap: Record<string, React.ComponentType<any>> = {
+  const fallbackMap: Record<string, IconType> = {
     BookIcon: FaBookOpen,
     EditIcon: FaScroll,
   };

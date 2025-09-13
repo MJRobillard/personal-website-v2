@@ -251,12 +251,15 @@ const SemesterCard: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester: Se
 const MarqueeVariant: React.FC<{ yearsSorted: YearEntry[] }> = ({ yearsSorted }) => {
     // Build horizontal semester sequence for lane layout
     type SemesterEntry = { year: string; label: 'Spring' | 'Summer' | 'Fall'; semester: Semester };
-    const semesterEntries: SemesterEntry[] = [];
-    yearsSorted.forEach((y) => {
-      if (y.spring) semesterEntries.push({ year: y.year, label: 'Spring', semester: y.spring });
-      if (y.summer) semesterEntries.push({ year: y.year, label: 'Summer', semester: y.summer });
-      if (y.fall) semesterEntries.push({ year: y.year, label: 'Fall', semester: y.fall });
-    });
+    const semesterEntries = useMemo<SemesterEntry[]>(() => {
+      const entries: SemesterEntry[] = [];
+      yearsSorted.forEach((y) => {
+        if (y.spring) entries.push({ year: y.year, label: 'Spring', semester: y.spring });
+        if (y.summer) entries.push({ year: y.year, label: 'Summer', semester: y.summer });
+        if (y.fall) entries.push({ year: y.year, label: 'Fall', semester: y.fall });
+      });
+      return entries;
+    }, [yearsSorted]);
 
     // Determine where to insert inline year separators (after the last semester of a given year)
     const boundaryLabelByAfterIndex = useMemo(() => {
@@ -370,7 +373,9 @@ const MarqueeVariant: React.FC<{ yearsSorted: YearEntry[] }> = ({ yearsSorted })
       const t1 = window.setTimeout(compute, 50);
       const t2 = window.setTimeout(compute, 250);
       // fonts ready can affect metrics
-      const fontPromise: Promise<void> | undefined = (document as any).fonts?.ready?.then(() => compute());
+      type DocumentWithFonts = Document & { fonts?: { ready?: Promise<void> } };
+      const docWithFonts = document as DocumentWithFonts;
+      docWithFonts.fonts?.ready?.then(() => compute());
 
       const ro = new ResizeObserver(() => compute());
       if (laneRef.current) ro.observe(laneRef.current);
@@ -544,7 +549,7 @@ const TimelineMarquee: React.FC<{ variant?: 'marquee' | 'collapsible' }> = ({ va
   const data = timelineData as unknown as Timeline;
   const yearsSorted = useMemo(() => {
     return [...data].sort((a, b) => Number(a.year) - Number(b.year));
-  }, [data]);
+  }, []);
   return variant === 'collapsible' ? (
     <CollapsibleVariant yearsSorted={yearsSorted} />
   ) : (

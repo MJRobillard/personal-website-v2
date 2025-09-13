@@ -2,19 +2,8 @@
 
 A Next.js portfolio website that explores the intersection of historical scholarship and computational analysis. Built with modern web technologies and inspired by the duality of ancient wisdom and modern intelligence.
 
-## 🐺 Tin Coyote (History)
-- Byzantine and Mesoamerican studies
-- Digital humanities and manuscript analysis
-- Paleography and cultural resistance research
-- Archival research and philological analysis
 
-## 🦊 Copper Fox (Data)
-- Machine learning for historical analysis
-- Natural language processing and computer vision
-- Network analysis and computational modeling
-- Full-stack development for academic institutions
-
-## Features
+## Feature
 
 - **Dual Theme Toggle**: Switch between "History" and "Data" modes with custom styling
 - **Responsive Design**: Optimized for all device sizes
@@ -84,12 +73,6 @@ src/
 - **Lint**: `npm run lint`
 
 ## Research Focus
-
-The portfolio showcases work at the intersection of:
-- **Digital Humanities**: Manuscript digitization and analysis
-- **Computational History**: Network analysis of historical data
-- **Cultural Studies**: Indigenous resistance and trickster narratives
-- **Machine Learning**: NLP and computer vision for historical texts
 
 ## License
 

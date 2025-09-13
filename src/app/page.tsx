@@ -74,7 +74,7 @@ export default function Home() {
 
       <section className="py-20 bg-muted transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">What I'm working on now</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">What I&apos;m working on now</h2>
           <div className="timeline relative">
             <div className="timeline-line" aria-hidden="true" />
             <div className="space-y-16">
