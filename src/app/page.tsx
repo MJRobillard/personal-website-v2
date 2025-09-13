@@ -120,54 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-background transition-colors duration-300">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-accent">Projects</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all history-emphasis">
-              <div className="text-sm text-accent-2 font-mono mb-2">HYBRID</div>
-              <h3 className="text-xl font-semibold mb-2">Byzantine Trade Networks</h3>
-              <p className="text-foreground/70 mb-4">Mapping 11th-century merchant routes using network analysis and archaeological evidence from Constantinople&apos;s harbor.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Network Analysis</span>
-                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Medieval History</span>
-              </div>
-            </div>
-            <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all history-emphasis">
-              <div className="text-sm text-accent-2 font-mono mb-2">HISTORY</div>
-              <h3 className="text-xl font-semibold mb-2">Codex of the Tin Coyote</h3>
-              <p className="text-foreground/70 mb-4">Deconstructing trickster narratives in Mesoamerican manuscripts and their influence on colonial resistance movements.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Indigenous Studies</span>
-                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Manuscript Analysis</span>
-              </div>
-            </div>
-            <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all data-emphasis">
-              <div className="text-sm text-accent-2 font-mono mb-2">DATA</div>
-              <h3 className="text-xl font-semibold mb-2">Verdigris Sentiment</h3>
-              <p className="text-foreground/70 mb-4">NLP analysis of emotional patterns in historical documents during periods of imperial decline and transformation.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">NLP</span>
-                <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Python</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-muted border-t border-border-color transition-colors duration-300">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h3 className="text-xl font-mono mb-8 text-accent">TOOLS OF THE TRADE</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Paleography</span>
-            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Python</span>
-            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Archival Research</span>
-            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">React</span>
-            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Latin & Greek</span>
-            <span className="px-4 py-2 bg-accent text-white rounded-full text-sm">Machine Learning</span>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }

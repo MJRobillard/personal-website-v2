@@ -10,55 +10,6 @@ export default function Projects() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Byzantine Trade Networks */}
-        <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all group history-emphasis">
-          <div className="text-sm text-accent-2 font-mono mb-3">HYBRID RESEARCH</div>
-          <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Byzantine Trade Networks</h3>
-                      <p className="text-foreground/70 mb-4 text-sm">
-              Mapping 11th-century merchant routes using network analysis and archaeological evidence 
-              from Constantinople&apos;s harbor. Combines traditional historical methods with computational 
-              network modeling.
-            </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Network Analysis</span>
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Medieval History</span>
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Python</span>
-          </div>
-          <div className="text-xs text-foreground/50">2024 • UC Berkeley</div>
-        </div>
-
-        {/* Codex of the Tin Coyote */}
-        <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all group history-emphasis">
-          <div className="text-sm text-accent-2 font-mono mb-3">HISTORICAL RESEARCH</div>
-          <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Codex of the Tin Coyote</h3>
-          <p className="text-foreground/70 mb-4 text-sm">
-            Deconstructing trickster narratives in Mesoamerican manuscripts and their influence on 
-            colonial resistance movements. Analysis of Nahuatl documents from the Bancroft Library.
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Indigenous Studies</span>
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Manuscript Analysis</span>
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Nahuatl</span>
-          </div>
-          <div className="text-xs text-foreground/50">2023 • Bancroft Library</div>
-        </div>
-
-        {/* Verdigris Sentiment */}
-        <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all group data-emphasis">
-          <div className="text-sm text-accent-2 font-mono mb-3">DATA SCIENCE</div>
-          <h3 className="text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Verdigris Sentiment</h3>
-          <p className="text-foreground/70 mb-4 text-sm">
-            NLP analysis of emotional patterns in historical documents during periods of imperial 
-            decline and transformation. Machine learning models for sentiment analysis in medieval texts.
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">NLP</span>
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">Python</span>
-            <span className="px-2 py-1 bg-accent text-white text-xs rounded-full">TensorFlow</span>
-          </div>
-          <div className="text-xs text-foreground/50">2024 • Berkeley Data Science Institute</div>
-        </div>
-
         {/* Manuscript Digitization Platform */}
         <div className="bg-muted rounded-xl p-6 border border-border-color hover:border-accent transition-all group data-emphasis">
           <div className="text-sm text-accent-2 font-mono mb-3">DIGITAL HUMANITIES</div>
