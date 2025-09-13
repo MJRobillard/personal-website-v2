@@ -14,22 +14,22 @@ export default function Navbar() {
         <ul className="nav-links">
           <li>
             <Link href="/trickster-crossroads">
-              Crossroads
+              thing1
             </Link>
           </li>
           <li>
             <Link href="/copper-chronicles">
-              Chronicles
+            thing1
             </Link>
           </li>
           <li>
             <Link href="/twin-paths">
-              Twin Paths
+            thing1
             </Link>
           </li>
           <li>
             <Link href="#contact">
-              Contact
+            thing1
             </Link>
           </li>
         </ul>
