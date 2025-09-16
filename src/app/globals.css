@@ -1277,6 +1277,345 @@ body {
 }
 
 /* ==============================
+   Vignette Animation Styles
+   ============================== */
+
+/* Vignette overlay */
+.vignette-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Vignette animation - customizable properties */
+.vignette-animation {
+  --vignette-intensity: 0.8;
+  --vignette-duration: 600ms;
+  --vignette-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 30%,
+    rgba(0, 0, 0, var(--vignette-intensity)) 100%
+  );
+  opacity: 0;
+  animation: vignetteFade var(--vignette-duration) var(--vignette-easing) forwards;
+}
+
+/* Vignette keyframes */
+@keyframes vignetteFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Light mode vignette - subtle darkening */
+.light .vignette-animation {
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* Dark mode vignette - bright flash */
+.dark .vignette-animation {
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 20%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+/* Fast vignette variant */
+.vignette-fast {
+  --vignette-duration: 300ms;
+  --vignette-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slow vignette variant */
+.vignette-slow {
+  --vignette-duration: 1000ms;
+  --vignette-easing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* High intensity vignette */
+.vignette-intense {
+  --vignette-intensity: 1.2;
+}
+
+/* Low intensity vignette */
+.vignette-subtle {
+  --vignette-intensity: 0.4;
+}
+
+/* Vignette with color tinting */
+.vignette-tinted {
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 30%,
+    rgba(45, 107, 159, 0.6) 100%
+  );
+}
+
+.dark .vignette-tinted {
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 20%,
+    rgba(60, 132, 255, 0.5) 100%
+  );
+}
+
+/* Advanced vignette effects */
+.vignette-pulse {
+  animation: vignetteFade var(--vignette-duration) var(--vignette-easing) forwards,
+             vignettePulse calc(var(--vignette-duration) / 2) ease-in-out infinite;
+}
+
+@keyframes vignettePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Vignette with blur effect */
+.vignette-blur {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Vignette with multiple layers */
+.vignette-layered {
+  background: 
+    radial-gradient(circle at center, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.2) 100%),
+    radial-gradient(circle at center, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.dark .vignette-layered {
+  background: 
+    radial-gradient(circle at center, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.1) 100%),
+    radial-gradient(circle at center, transparent 0%, transparent 15%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+/* Vignette with edge glow */
+.vignette-glow {
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+.dark .vignette-glow {
+  box-shadow: 
+    0 0 0 1px rgba(60, 132, 255, 0.2),
+    inset 0 0 100px rgba(60, 132, 255, 0.1);
+}
+
+/* ==============================
+   Phone Visual Component Styles
+   ============================== */
+
+/* iPhone frame animations */
+.phone-frame {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.phone-frame:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Light mode iPhone colors */
+.light .phone-space-gray {
+  background: linear-gradient(145deg, #1c1c1e, #2c2c2e);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.light .phone-space-gray .phone-screen {
+  background: #ffffff;
+}
+
+.light .phone-space-gray .phone-notch,
+.light .phone-space-gray .phone-home-indicator {
+  background: #1c1c1e;
+}
+
+/* Dark mode iPhone colors - Earthy Brown */
+.dark .phone-earthy-brown {
+  background: linear-gradient(145deg, #8B4513, #A0522D);
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.4);
+}
+
+.dark .phone-earthy-brown .phone-screen {
+  background: #f2f2f7;
+}
+
+.dark .phone-earthy-brown .phone-notch,
+.dark .phone-earthy-brown .phone-home-indicator {
+  background: #8B4513;
+}
+
+/* Alternative iPhone colors for variety */
+.light .phone-silver {
+  background: linear-gradient(145deg, #f5f5f7, #e5e5e7);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.light .phone-silver .phone-screen {
+  background: #ffffff;
+}
+
+.light .phone-silver .phone-notch,
+.light .phone-silver .phone-home-indicator {
+  background: #e5e5e7;
+}
+
+.dark .phone-silver {
+  background: linear-gradient(145deg, #e5e5e7, #d1d1d6);
+  box-shadow: 0 8px 32px rgba(229, 229, 231, 0.3);
+}
+
+.dark .phone-silver .phone-screen {
+  background: #f2f2f7;
+}
+
+.dark .phone-silver .phone-notch,
+.dark .phone-silver .phone-home-indicator {
+  background: #d1d1d6;
+}
+
+.light .phone-gold {
+  background: linear-gradient(145deg, #ffd700, #ffb347);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+}
+
+/* Additional earthy brown variants */
+.dark .phone-warm-brown {
+  background: linear-gradient(145deg, #D2691E, #CD853F);
+  box-shadow: 0 8px 32px rgba(210, 105, 30, 0.4);
+}
+
+.dark .phone-warm-brown .phone-screen {
+  background: #f2f2f7;
+}
+
+.dark .phone-warm-brown .phone-notch,
+.dark .phone-warm-brown .phone-home-indicator {
+  background: #D2691E;
+}
+
+.dark .phone-copper-brown {
+  background: linear-gradient(145deg, #B87333, #CD7F32);
+  box-shadow: 0 8px 32px rgba(184, 115, 51, 0.4);
+}
+
+.dark .phone-copper-brown .phone-screen {
+  background: #f2f2f7;
+}
+
+.dark .phone-copper-brown .phone-notch,
+.dark .phone-copper-brown .phone-home-indicator {
+  background: #B87333;
+}
+
+.dark .phone-midnight-green {
+  background: linear-gradient(145deg, #004d40, #00695c);
+  box-shadow: 0 8px 32px rgba(0, 77, 64, 0.4);
+}
+
+.dark .phone-purple {
+  background: linear-gradient(145deg, #8e44ad, #9b59b6);
+  box-shadow: 0 8px 32px rgba(142, 68, 173, 0.4);
+}
+
+/* Phone screen content styling */
+.phone-screen-content {
+  background: #f2f2f7;
+  transition: background-color 0.5s ease;
+}
+
+.light .phone-screen-content {
+  background: #ffffff;
+}
+
+.dark .phone-screen-content {
+  background: #1c1c1e;
+}
+
+/* Phone depth shadow */
+.phone-shadow {
+  background: radial-gradient(50% 60% at 50% 50%, rgba(0,0,0,0.2), rgba(0,0,0,0) 70%);
+  filter: blur(12px);
+  transition: all 0.5s ease;
+}
+
+.dark .phone-shadow {
+  background: radial-gradient(50% 60% at 50% 50%, rgba(0,0,0,0.6), rgba(0,0,0,0) 70%);
+}
+
+/* Phone notch styling */
+.phone-notch {
+  position: relative;
+}
+
+.phone-notch::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+/* Home indicator styling */
+.phone-home-indicator {
+  position: relative;
+}
+
+.phone-home-indicator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+}
+
+/* ==============================
    Enhanced Timeline Components
    ============================== */
 

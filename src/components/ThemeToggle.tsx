@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import VignetteManager, { VignettePresets } from "./VignetteManager";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [showVignette, setShowVignette] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -27,6 +29,9 @@ export default function ThemeToggle() {
     setIsDark(next);
     const root = document.documentElement;
     
+    // Trigger vignette animation
+    setShowVignette(true);
+    
     // Update theme classes
     if (next) {
       root.classList.add("dark");
@@ -39,19 +44,32 @@ export default function ThemeToggle() {
     }
   };
 
+  const handleVignetteComplete = () => {
+    setShowVignette(false);
+  };
+
   if (!mounted) return <div className="w-20 h-8 rounded-full bg-muted/60 animate-pulse" />;
 
   return (
-    <div className="duality-toggle">
-      <span>HISTORY</span>
-      <div 
-        className="toggle-switch"
-        onClick={toggleDuality}
-      >
-        <div className="toggle-slider"></div>
+    <>
+      <div className="duality-toggle">
+        <span>HISTORY</span>
+        <div 
+          className="toggle-switch"
+          onClick={toggleDuality}
+        >
+          <div className="toggle-slider"></div>
+        </div>
+        <span>DATA</span>
       </div>
-      <span>DATA</span>
-    </div>
+      
+      {/* Vignette Animation */}
+      <VignetteManager
+        trigger={showVignette}
+        config={VignettePresets.standard}
+        onComplete={handleVignetteComplete}
+      />
+    </>
   );
 }
 
