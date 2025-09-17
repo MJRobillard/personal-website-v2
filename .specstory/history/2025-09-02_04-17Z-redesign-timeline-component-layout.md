@@ -2,7 +2,7 @@
 
 # Redesign timeline component layout (2025-09-02 04:17Z)
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 @TimelineMarquee.tsx Instead of two timelines, do it with a single main line, and on top data, on bottom history, still going  let to right with the time areas. Be creative and think about the project looking good 
 
@@ -65,7 +65,7 @@ I'll run a quick lint check on the updated file to ensure there are no new error
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 have the horrizontal line a bit lower so its below the data acards, 
 
@@ -105,7 +105,7 @@ I'll lower the unified horizontal line and align each era's vertical tick to the
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 Also, edit the @TimelineItem.tsx to have more of the info from @technologies.json 
 
@@ -165,7 +165,7 @@ I'll run a lint check on the modified files to ensure they're clean.
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Have a larger gap when the timeline repeats itself 
 
@@ -241,7 +241,7 @@ I’ll add the spacer right after the mapping section, using responsive width cl
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Add more of a CARD_HEIGHT to fit all the classes in  
 

@@ -2,7 +2,7 @@
 
 # Improve spacing in TimelineMarquee (2025-09-07 15:44Z)
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Lets brain storm how we can improve the line in the @TimelineMarquee.tsx , its a bit not consistent with spacing and doesnt look that good. See how the 2023 just overlaps weirdly
 
@@ -141,7 +141,7 @@ If you want, I can apply options 1–3 now so you can see the difference, then t
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 do whatever you think is best 
 
@@ -203,7 +203,7 @@ Let me check for any type or lint issues in `src/components/TimelineMarquee.tsx`
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 have the verticel line for the year go further down 
 
@@ -235,7 +235,7 @@ I'll extend the year tick line by introducing a `YEAR_TICK_HEIGHT` constant and 
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Make that verticle line and line in general stand out more / have more contrast but be behind the card 
 
@@ -277,7 +277,7 @@ If you want the ticks to fade subtly into the baseline, I can add a small vertic
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 The line should always be located after the fall card and seperate it from the spring
 
@@ -317,7 +317,7 @@ I'll update the year tick logic to place the separator line after each year's fa
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Off by 1 year, it should be inbetween all the cards in the center with margins between, also there should be a distingshion when the timeline repeats 
 

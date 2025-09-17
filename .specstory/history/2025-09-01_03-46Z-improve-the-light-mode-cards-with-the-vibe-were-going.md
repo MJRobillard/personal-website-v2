@@ -2,7 +2,7 @@
 
 # Improve the light mode cards with the vibe were going (2025-09-01 03:46Z)
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 Improve the light mode cards with the vibe were going for @vibe.md.  
 
@@ -148,7 +148,7 @@ Want me to also align `--lapiz-primary` in `.light` to the blue from the palette
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 imlpiment a history for light mode that:
 
@@ -275,7 +275,7 @@ These match the “framed artifact” vibe: crisp, minimal white surfaces with w
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 I dont see the double frame  card at all, double check its implimented on the main hero section page
 

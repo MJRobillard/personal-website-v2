@@ -2,7 +2,7 @@
 
 # Update timeline component data source (2025-09-07 15:27Z)
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 @TimelineMarquee.tsx Uses @technologies.json, instead adjust it to use @timeline.json with this interface and show it all in that timeline style. // Each course has a name + category (Data, History, or both)
 interface Course {
@@ -110,7 +110,7 @@ You can now use `TimelineMarquee` as-is; it defaults to the collapsible variant 
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 
 
@@ -188,7 +188,7 @@ I’m thinking about improving the component. If the variant matters, I should e
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 For the timeline, I want it scrolling ot the right similar to how we were doing it earlier, these should just be like those cards that may expand on hover or something.
 
@@ -227,7 +227,7 @@ How to use:
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 How can we improve the layout so that it shows information about jobs going on for longer periods of time then the courses without just being under 
 
@@ -277,7 +277,7 @@ If you want the bars colored by organization or clickable to reveal the full des
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 The two overlap, have some distance or something 
 
@@ -313,7 +313,7 @@ If you want more space, I can bump the padding (e.g., to 64px) or reduce card he
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Have it go from right to left, and brainstorm ways to reduce clutter, like the job still inside the course lane even though its above and spans multiple semesters, and should have a timeline look like havnig the bars that mark new time areas. 
 
@@ -363,7 +363,7 @@ Further improvements we can add:
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 left to right
 
@@ -389,7 +389,7 @@ Switching the marquee scroll direction back to right so the timeline moves left-
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 also have the bar have distance from the cards so it appears better 
 

@@ -2,7 +2,7 @@
 
 # Investigate timeline lane display issue (2025-09-07 16:18Z)
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 in @TimelineMarquee.tsx , investigate why the Larger work stuff in @timeline.json does not show up as its own lane 
 
@@ -182,7 +182,7 @@ Question
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 
 
@@ -264,7 +264,7 @@ Do you want to keep `timeline.json` as the single source of truth, or switch bac
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 I still do not see the Work bars. are you sur ethe component is called I th
 
@@ -311,7 +311,7 @@ I'm analyzing the setup where the bars should be above the cards. The bars start
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Just re-impliment it to ensure it pops up
 
@@ -381,7 +381,7 @@ If you want, I can temporarily add a static “WORK LANE” debug stripe so it�
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 For some reason, it only shows up when the dimensions of the viewport change. mid run 
 
@@ -425,7 +425,7 @@ Read file: undefined
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 
 
@@ -507,7 +507,7 @@ Please hard refresh and check again; the work bars should render immediately wit
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Have the popup for the course items have a larger z index, and there are two year things on the vertical lines, remove the lower one that is always a year behind 
 
@@ -575,7 +575,7 @@ Let me know if you want the year label moved above the line instead.
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 reduce the vertical height of the top lane arnge thing more 
 
@@ -607,7 +607,7 @@ I’m looking for all instances of 'h-8' related to the lane, but I need to skip
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 add some margin for when the timeline repeats
 

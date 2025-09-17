@@ -2,7 +2,7 @@
 
 # Style adjustments for light mode (2025-09-02 03:49Z)
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 This version looks good for dark mode, but have a styling for light mode that follows the vibe in @globals.css @TimelineMarquee.tsx @TimelineItem.tsx @TechTicker.tsx 
 
@@ -129,7 +129,7 @@ Summary:
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 The text headers for that section should be on screen though. Furthermore, be a bit more interesting with the metadata 
 
@@ -236,7 +236,7 @@ If you want the rail to literally touch the very top/bottom, I can set the secti
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 Change the existing components 1. Layout & Structure
 
@@ -1391,7 +1391,7 @@ The components now provide a much more engaging and visually appealing experienc
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 I like it but have the single timeline with different alternating branches but still horizontal as suggested in the instructins
 
@@ -1771,7 +1771,7 @@ The current page is set to show the `dual-layer` variant so you can see the hori
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 it should still be passing by and more space be smart abt it 
 

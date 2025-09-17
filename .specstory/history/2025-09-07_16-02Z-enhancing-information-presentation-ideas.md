@@ -2,7 +2,7 @@
 
 # Enhancing information presentation ideas (2025-09-07 16:02Z)
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 just brainstornm what are some ways I can show more of the information of what I was taking without being overbearing
 
@@ -72,7 +72,7 @@ Want me to implement the popover and a minimal “Featured 2” carousel next? I
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Yes impliment it @TimelineItem.tsx 
 
@@ -126,7 +126,7 @@ I added a popover for the “+N” overflow that reveals remaining tags on hover
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Wait my bad, its in @TimelineMarquee.tsx and @TechTicker.tsx maybe
 
@@ -185,7 +185,7 @@ Made the change in the right place.
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Fix the line component that shows the year is off, it should be right after the fall card, with the next year present and inbetween cards. How could we do this well for screen size change 
 
@@ -212,6 +212,10 @@ I need to create a helper function, `computeLayout()`, to get the necessary node
 ---
 
 I'll compute positions of semester cards at runtime and place the year tick exactly between the last Fall card of one year and the first Spring card of the next. This uses ResizeObserver and window resize to adapt on screen size changes, and also updates work-span bar positions to match measured widths. Now I'll implement these edits in `src/components/TimelineMarquee.tsx`.
+
+---
+
+
 
 ---
 

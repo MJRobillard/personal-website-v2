@@ -2,7 +2,7 @@
 
 # Build a responsive timeline marquee component (2025-09-02 03:41Z)
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 I want you to replace the @TechTicker.tsx component to one that:
 
@@ -371,7 +371,7 @@ I understand that the user wants the code updated, so I'll confirm that it's don
 
 ---
 
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 This version looks good for dark mode, but have a styling for light mode that follows the vibe in @globals.css 
 
@@ -409,11 +409,7 @@ I'll implement light-mode styles by introducing reusable CSS classes in `globals
 
 ---
 
-
-
----
-
-_**User**_
+_**User (2025-09-02 01:38Z)**_
 
 A;sp have no margin left or right on it so it appears it just goes off screan
 

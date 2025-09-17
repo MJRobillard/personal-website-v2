@@ -2,7 +2,7 @@
 
 # Implement card variations for hero area (2025-09-01 02:58Z)
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 Impliment a few card variations for the cardsin the hero Area for light mode (and dark): 
 
@@ -353,7 +353,7 @@ Read file: undefined
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 Add all the card variations to the hero section under the other ones just to try them out 
 
@@ -503,7 +503,7 @@ Cancelled
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 impliment a double bordered card Aswell, with the border color as a gradient aswell for dark and light 
 
@@ -578,7 +578,7 @@ Notes:
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 Just have those two most recent cards But also put in the text Data Science and History Yap 
 
@@ -623,7 +623,7 @@ If you want different gradient colors per card, I can set custom CSS vars on eac
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 The text does not show up in the inside
 
@@ -676,7 +676,7 @@ Refresh the page; the “History” and “Data Science” text should now be vi
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
  For the Data Science card, Have the borders be notebly more Lapis blue. For the History Card, have the borders be visibily more copper bronzey for both light and dark mode. Also there should only be one header for that card (no need to say data science twice or history twice) 
 
@@ -723,7 +723,7 @@ You can tweak the exact colors by adjusting the CSS vars on those modifier class
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 Do the Same for the dark mode cards
 
@@ -768,7 +768,7 @@ These apply automatically when the `dark` class or system dark mode is active.
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 on both light and dark mode cards, have them have a shadow looking thing below to give a feel of depth 
 
@@ -805,7 +805,7 @@ This applies to both the History and Data Science cards automatically.
 
 ---
 
-_**User**_
+_**User (2025-09-01 02:58Z)**_
 
 same for the hero image 
 

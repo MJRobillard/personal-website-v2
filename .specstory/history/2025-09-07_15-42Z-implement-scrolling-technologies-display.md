@@ -2,7 +2,7 @@
 
 # Implement scrolling technologies display (2025-09-07 15:42Z)
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 similar to the @timeline.json ,do something for just @technologies.json but so that it just scrolls through my technologies but in no really ordered time way but the layout should support it, consider using @globals.css for light and dark mode stuff below where the @TimelineMarquee.tsx is implimented 
 
@@ -119,7 +119,7 @@ If you want icons for each technology instead of the simple emoji, I can wire up
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 impliment it 
 
@@ -175,7 +175,7 @@ You can reorder or remove one if you want only the technologies ticker visible.
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 increaase the side of the fonts and stuff so its bigger and easier to read and just an overall better layout also reverse the direction 
 
@@ -221,7 +221,7 @@ If you want it to scroll faster/slower or have larger cards still, tell me your 
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 The subtitle where the emoji is is a bit tough to read, fix it 
 
@@ -264,7 +264,7 @@ If you want even stronger contrast in dark mode only, I can add a `.dark`-specif
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 in light mode, it still is tough to read, change the style to improve it 
 
@@ -318,7 +318,7 @@ Note: The linter warning about `@theme` is pre-existing and unrelated; everythin
 
 ---
 
-_**User**_
+_**User (2025-09-07 15:27Z)**_
 
 Technologies & Tools
 Should have consistent font and color changes with the light and dark mode as the rest of the project @globals.css 
