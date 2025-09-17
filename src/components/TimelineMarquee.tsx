@@ -549,7 +549,7 @@ const TimelineMarquee: React.FC<{ variant?: 'marquee' | 'collapsible' }> = ({ va
   const data = timelineData as unknown as Timeline;
   const yearsSorted = useMemo(() => {
     return [...data].sort((a, b) => Number(a.year) - Number(b.year));
-  }, []);
+  }, [data]);
   return variant === 'collapsible' ? (
     <CollapsibleVariant yearsSorted={yearsSorted} />
   ) : (

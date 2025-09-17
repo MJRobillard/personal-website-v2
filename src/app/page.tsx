@@ -37,7 +37,7 @@ export default function Home() {
                 <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis">
                   <h3 className="text-xl font-semibold text-foreground">Data Science</h3>
                   <p className="mt-2 text-foreground/75">
-                    The final step of the scientific method. Making sense of the information to make the 'best' decision. 
+                    The final step of the scientific method. Making sense of the information to make the &apos;best&apos; decision. 
                   </p>
                   <p className="mt-2 text-foreground/60 italic">
                   (Or a LLM doing horoscopes, overfit on Scorpios and a dropout process scheduled for Mercury retrograde.)
