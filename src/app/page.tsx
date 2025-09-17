@@ -149,18 +149,32 @@ export default function Home() {
                 <div className="text-sm text-accent-2 font-mono mb-2">FEATURED PROJECT</div>
                 <h3 className="text-2xl font-semibold text-foreground mb-4">Pacman AI Agent</h3>
                 <p className="text-foreground/75 mb-4 text-lg">
-                  An intelligent Pacman agent that uses advanced AI algorithms to navigate mazes, 
-                  collect pellets, and avoid ghosts. Built with modern web technologies and 
-                  featuring multiple difficulty levels and visualization tools.
+                  An application to showcase advanced AI search algorithms through something many know and love: Pacman. 
+                  Featuring Depth-First Search (DFS), Breadth-First Search (BFS), Uniform Cost Search (UCS), A* Search, 
+                  and multi-agent strategies like Minimax, Alpha-Beta Pruning, and Expectimax.
                 </p>
                 <p className="text-foreground/60 mb-6 italic">
                   Experience the demo in the interactive iframe, or explore the full project 
                   with source code, documentation, and additional features.
                 </p>
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-foreground mb-3">Technologies Used:</h4>
+                  <div className="space-y-2 text-sm text-foreground/75">
+                    <div><strong>Frontend:</strong> React.js, Next.js</div>
+                    <div><strong>Styling:</strong> Tailwind CSS</div>
+                    <div><strong>UI Components:</strong> Headless UI, Heroicons</div>
+                    <div><strong>Development Tools:</strong> TypeScript, Node.js, npm</div>
+                    <div><strong>Algorithms:</strong> DFS, BFS, UCS, A* Search, Reflex Agent, Minimax, Alpha-Beta Pruning, Expectimax</div>
+                    <div><strong>Visualization:</strong> Custom real-time animations for maze exploration</div>
+                  </div>
+                </div>
                 <div className="flex flex-wrap gap-3 mb-6">
                   <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">AI/ML</span>
-                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">JavaScript</span>
-                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Canvas API</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">React.js</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Next.js</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">TypeScript</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">A* Search</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Minimax</span>
                   <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Algorithm Design</span>
                 </div>
                 <div className="flex gap-4">
