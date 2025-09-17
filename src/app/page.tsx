@@ -77,7 +77,7 @@ export default function Home() {
       <section id="timeline" className="py-20 bg-muted transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-semibold mb-4 text-accent section-title">What I'm Working on Today</h2>
+            <h2 className="text-4xl font-semibold mb-4 text-accent section-title">What I&apos;m Working on Today</h2>
             <p className="text-lg text-foreground/75 max-w-2xl mx-auto">
               Current projects and research spanning the intersection of history and data science
             </p>

@@ -132,7 +132,7 @@ export default function PhoneVisual({
 
   return (
     <motion.div 
-      className="relative mx-auto max-w-md"
+      className="phone-container relative"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
