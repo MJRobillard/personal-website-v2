@@ -27,7 +27,7 @@ export default function Home() {
                 <div className="card-base card-double-gradient card-double-gradient--history history-typography history-emphasis">
                   <h3 className="text-xl font-semibold text-foreground">History</h3>
                   <p className="mt-2 text-foreground/75">
-                    The first part of the scientific method. What’s been tried before, why it didn’t work, and what we can learn from it.
+                    The first part of the scientific method. What&apos;s been tried before, why it didn&apos;t work, and what we can learn from it.
                   </p>
                   <p className="mt-2 text-foreground/60 italic">
                     (Or at the very least, a record of our bad ideas so we can laugh before repeating them.)
@@ -134,7 +134,6 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <PhoneVisual
                 src="https://pacman-ai-five.vercel.app/demo"
-                alt="Pacman AI Demo"
                 title="Pacman AI Demo"
               />
             </div>
