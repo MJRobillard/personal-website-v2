@@ -103,7 +103,7 @@ export default function PhoneVisual({
 
   if (!mounted) {
     return (
-      <div className="relative mx-auto max-w-sm">
+      <div className="relative mx-auto max-w-md">
         <motion.div 
           className="relative bg-gray-300 rounded-[2.5rem] p-2 shadow-2xl"
           animate={{ 
@@ -132,7 +132,7 @@ export default function PhoneVisual({
 
   return (
     <motion.div 
-      className="relative mx-auto max-w-sm"
+      className="relative mx-auto max-w-md"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -190,7 +190,7 @@ export default function PhoneVisual({
           
           {/* Screen content */}
           <motion.div 
-            className="phone-screen-content h-[600px] relative"
+            className="phone-screen-content h-[800px] relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}

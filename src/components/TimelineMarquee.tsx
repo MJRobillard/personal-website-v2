@@ -37,31 +37,31 @@ interface YearEntry {
 type Timeline = YearEntry[];
 
 const CategoryBadge: React.FC<{ category: Course['category'] }> = ({ category }) => {
-  const base = 'text-[10px] px-2 py-0.5 rounded-full border';
+  const base = 'text-[10px] px-2 py-0.5 rounded-full border font-medium';
   const cls =
     category === 'Data'
-      ? `${base} border-accent/40 text-accent` // Data -> Lapiz (accent)
+      ? `${base} border-accent/60 text-accent bg-accent/10` // Data -> Lapiz (accent)
       : category === 'History'
-      ? `${base} border-accent-2/40 text-accent-2` // History -> Copper (accent-2)
-      : `${base} border-foreground/30 text-foreground/80`;
+      ? `${base} border-accent-2/60 text-accent-2 bg-accent-2/10` // History -> Copper (accent-2)
+      : `${base} border-foreground/40 text-foreground/80 bg-foreground/5`;
   return <span className={cls}>{category}</span>;
 };
 
 const SemesterBlock: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester?: Semester }> = ({ label, semester }) => {
   if (!semester) return null;
   return (
-    <div className="rounded-lg border border-border-color bg-background/40 p-4 space-y-3">
+    <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis rounded-lg p-4 space-y-3">
       <div className="flex items-center gap-2">
-        <div className="w-1.5 h-1.5 rounded-full bg-border-color" />
-        <h5 className="text-sm font-semibold tracking-wide">{label}</h5>
+        <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+        <h5 className="text-sm font-semibold tracking-wide text-foreground">{label}</h5>
       </div>
       {semester.courses && semester.courses.length > 0 && (
         <div className="space-y-2">
-          <div className="text-xs opacity-70">Courses</div>
+          <div className="text-xs text-foreground/70 font-medium">Courses</div>
           <ul className="space-y-1">
             {semester.courses.map((c, i) => (
               <li key={`${c.name}-${i}`} className="flex items-start justify-between gap-3">
-                <span className="text-sm leading-snug">{c.name}</span>
+                <span className="text-sm leading-snug text-foreground">{c.name}</span>
                 <CategoryBadge category={c.category} />
               </li>
             ))}
@@ -70,10 +70,10 @@ const SemesterBlock: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester?: 
       )}
       {semester.work && (
         <div className="space-y-1">
-          <div className="text-xs opacity-70">Work</div>
-          <div className="text-sm font-medium">{semester.work.title}</div>
-          <div className="text-xs opacity-80">{semester.work.organization}</div>
-          <p className="text-sm opacity-90 leading-snug">{semester.work.description}</p>
+          <div className="text-xs text-foreground/70 font-medium">Work</div>
+          <div className="text-sm font-medium text-foreground">{semester.work.title}</div>
+          <div className="text-xs text-foreground/80">{semester.work.organization}</div>
+          <p className="text-sm text-foreground/90 leading-snug">{semester.work.description}</p>
         </div>
       )}
     </div>
@@ -88,15 +88,15 @@ const YearHeader: React.FC<{
 }> = ({ year, meta, isExpanded, onToggle }) => {
   return (
     <motion.div
-      className="flex items-center gap-3 cursor-pointer"
+      className="flex items-center gap-3 cursor-pointer hover:text-accent transition-colors"
       onClick={onToggle}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
     >
-      <h4 className={`text-lg font-semibold ${merriweather.className} section-title`}>{year}</h4>
-      <span className={`text-sm opacity-70`}>({meta.semesters} semesters • {meta.courses} courses{meta.hasWork ? ' • work' : ''})</span>
+      <h4 className={`text-lg font-semibold ${merriweather.className} section-title text-foreground`}>{year}</h4>
+      <span className={`text-sm text-foreground/70`}>({meta.semesters} semesters • {meta.courses} courses{meta.hasWork ? ' • work' : ''})</span>
       <motion.div animate={{ rotate: isExpanded ? 90 : 0 }} transition={{ duration: 0.2 }}>
-        <FaChevronRight className="w-3 h-3 opacity-60" />
+        <FaChevronRight className="w-3 h-3 text-foreground/60" />
       </motion.div>
     </motion.div>
   );
@@ -109,8 +109,8 @@ const YearSeparator: React.FC<{ year: string }> = ({ year }) => {
   return (
     <div className="flex items-stretch justify-center min-w-[80px]">
       <div className="relative flex flex-col items-center -translate-y-2">
-        <div className="text-sm md:text-base font-semibold text-foreground mb-1">{year}</div>
-        <div className="w-px h-32 bg-foreground/50" />
+        <div className="text-sm md:text-base font-semibold text-accent mb-1 section-title">{year}</div>
+        <div className="w-px h-32 bg-gradient-to-b from-accent via-accent/60 to-transparent" />
       </div>
     </div>
   );
@@ -169,17 +169,17 @@ const SemesterCard: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester: Se
     <motion.div
       whileHover={{ scale: 1.04 }}
       transition={{ duration: 0.18 }}
-      className="min-w-[280px] max-w-[320px] bg-background/70 border border-border-color rounded-lg p-3 shadow-sm hover:shadow-md hover:border-accent-2/60 cursor-pointer"
+      className="min-w-[280px] max-w-[320px] card-base card-double-gradient card-double-gradient--data data-typography data-emphasis rounded-lg p-3 cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex items-center justify-between gap-3">
-        <div className="text-xs font-semibold tracking-wide">{year} {label}</div>
-        <div className="text-[10px] opacity-70">{summary}</div>
+        <div className="text-xs font-semibold tracking-wide text-foreground">{year} {label}</div>
+        <div className="text-[10px] text-foreground/70">{summary}</div>
       </div>
       {featureItems.length > 0 && (
         <div className="mt-1 text-[11px] leading-4">
-          <span className="opacity-70">Highlights:</span> <span className="font-medium">{featureItems[featureIndex]}</span>
+          <span className="text-foreground/70">Highlights:</span> <span className="font-medium text-foreground">{featureItems[featureIndex]}</span>
           {featureItems.length > 1 && !prefersReducedMotion ? (
             <div className="relative h-[2px] bg-foreground/10 mt-1 rounded">
               <motion.div
@@ -187,7 +187,7 @@ const SemesterCard: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester: Se
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ duration: 5.8, ease: 'linear' }}
-                className="h-full bg-foreground/50 rounded"
+                className="h-full bg-accent rounded"
               />
             </div>
           ) : null}
@@ -198,7 +198,7 @@ const SemesterCard: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester: Se
           <div className="space-y-1">
             {(semester.courses || []).slice(0, 2).map((c, i) => (
               <div key={`${c.name}-${i}`} className="flex items-center justify-between gap-2">
-                <span className="text-sm truncate" title={c.name}>{c.name}</span>
+                <span className="text-sm truncate text-foreground" title={c.name}>{c.name}</span>
                 <CategoryBadge category={c.category} />
               </div>
             ))}
@@ -206,7 +206,7 @@ const SemesterCard: React.FC<{ label: 'Spring' | 'Summer' | 'Fall'; semester: Se
               <div className="relative inline-block z-[1000]" ref={popoverRef}>
                 <button
                   type="button"
-                  className="text-[10px] opacity-80 px-1 py-[1px] rounded hover:opacity-100 focus:outline-none focus-visible:ring-1 focus-visible:ring-foreground/40"
+                  className="text-[10px] text-foreground/80 px-1 py-[1px] rounded hover:text-foreground hover:bg-foreground/10 focus:outline-none focus-visible:ring-1 focus-visible:ring-accent/40"
                   aria-haspopup="dialog"
                   aria-expanded={isPopoverOpen}
                   onMouseEnter={() => setIsPopoverOpen(true)}
@@ -393,7 +393,7 @@ const MarqueeVariant: React.FC<{ yearsSorted: YearEntry[] }> = ({ yearsSorted })
     return (
       <section className={`${inter.className} py-6 bg-muted border-y border-border-color`}>
         <div className="max-w-7xl mx-auto px-4 flex items-center gap-3 mb-4">
-          <h3 className="tech-ticker-header text-lg tracking-wide font-sans">Academic & Work Timeline</h3>
+          <h3 className="tech-ticker-header text-2xl tracking-wide font-sans dark:text-accent-2">Academic & Work Timeline</h3>
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border-color to-transparent" />
         </div>
         <div className="relative overflow-hidden w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
@@ -432,7 +432,7 @@ const MarqueeVariant: React.FC<{ yearsSorted: YearEntry[] }> = ({ yearsSorted })
 
               {/* Separation baseline between work lane and semester cards */}
               <div
-                className="absolute left-0 z-0 bg-gradient-to-r from-transparent via-foreground/50 to-transparent h-[2px]"
+                className="absolute left-0 z-0 bg-gradient-to-r from-foreground/50 via-foreground/50 to-transparent h-[2px] md:bg-gradient-to-r md:from-transparent md:via-foreground/50 md:to-transparent"
                 style={{ top: `${BASELINE_TOP}px`, width: `${measured.totalWidth}px` }}
               />
 
@@ -446,7 +446,7 @@ const MarqueeVariant: React.FC<{ yearsSorted: YearEntry[] }> = ({ yearsSorted })
               </div>
             
               {/* Semester cards row */}
-              <div className="flex items-stretch gap-6 relative z-10" ref={laneRef}>
+              <div className="flex items-stretch gap-6 relative z-20" ref={laneRef}>
                 {semesterEntries.map((entry, idx) => (
                   <React.Fragment key={`semwrap-${entry.year}-${entry.label}-${idx}`}>
                     <div data-sem-idx={idx} className="min-w-[280px] max-w-[320px]">

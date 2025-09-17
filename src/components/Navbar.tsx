@@ -13,24 +13,24 @@ export default function Navbar() {
         
         <ul className="nav-links">
           <li>
-            <Link href="/trickster-crossroads">
-              thing1
-            </Link>
+            <a href="#about" className="hover:text-accent transition-colors">
+              About
+            </a>
           </li>
           <li>
-            <Link href="/copper-chronicles">
-            thing1
-            </Link>
+            <a href="#timeline" className="hover:text-accent transition-colors">
+              Timeline
+            </a>
           </li>
           <li>
-            <Link href="/twin-paths">
-            thing1
-            </Link>
+            <a href="#projects" className="hover:text-accent transition-colors">
+              Projects
+            </a>
           </li>
           <li>
-            <Link href="#contact">
-            thing1
-            </Link>
+            <a href="#contact" className="hover:text-accent transition-colors">
+              Contact
+            </a>
           </li>
         </ul>
         

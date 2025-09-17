@@ -1520,3 +1520,74 @@ The phone component now has much smoother, more professional animations compared
 
 ---
 
+_**User (2025-09-17 00:47Z)**_
+
+have a slightly larger width: 
+
+---
+
+_**Assistant**_
+
+I'll increase the width of the phone component. Looking at the current code, I can see it's using `max-w-sm` which is quite small. Let me make it larger:
+
+
+---
+
+<details><summary>Edit file: src/components/PhoneVisual.tsx</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -133,5 +133,5 @@
+    return (
+      <motion.div 
+-       className="relative mx-auto max-w-sm"
++       className="relative mx-auto max-w-md"
+        variants={containerVariants}
+        initial="hidden"
+```
+
+</details>
+
+---
+
+I also need to update the loading state to match the new width:
+
+
+---
+
+<details><summary>Edit file: src/components/PhoneVisual.tsx</summary>
+
+undefined
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -104,5 +104,5 @@
+    if (!mounted) {
+      return (
+-       <div className="relative mx-auto max-w-sm">
++       <div className="relative mx-auto max-w-md">
+          <motion.div 
+            className="relative bg-gray-300 rounded-[2.5rem] p-2 shadow-2xl"
+```
+
+</details>
+
+---
+
+Perfect! I've increased the width of the phone component from `max-w-sm` (384px) to `max-w-md` (448px). This gives the phone component a slightly larger width while maintaining the responsive design and all the smooth animations.
+
+The changes I made:
+- **Container width**: Changed from `max-w-sm` to `max-w-md` 
+- **Loading state**: Updated to match the new width
+- **Maintained**: All animations and responsive behavior
+
+The phone component will now appear noticeably wider, making the iframe content more visible and easier to interact with while still looking proportional on the page.
+
+---
+
