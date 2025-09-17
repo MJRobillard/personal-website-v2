@@ -40,7 +40,7 @@ export default function Home() {
                     The final step of the scientific method. Making sense of the information to make the &apos;best&apos; decision. 
                   </p>
                   <p className="mt-2 text-foreground/60 italic">
-                  (Or a LLM doing horoscopes, overfit on Scorpios and a dropout process scheduled for Mercury retrograde.)
+                  (Or a LLM creating horoscopes, overfit on Scorpios and a dropout process scheduled for Mercury retrograde.)
                   </p>
                 </div>
 
