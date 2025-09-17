@@ -190,7 +190,7 @@ export default function PhoneVisual({
           
           {/* Screen content */}
           <motion.div 
-            className="phone-screen-content h-[800px] relative"
+            className="phone-screen-content h-[750px] relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}

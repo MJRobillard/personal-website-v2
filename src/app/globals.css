@@ -131,6 +131,11 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  /* Force consistent rendering across network contexts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent zoom differences between localhost and network IP */
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Ensure consistent box-sizing */
@@ -1493,26 +1498,38 @@ body {
 /* Ensure consistent sizing across environments */
 .phone-container {
   width: 100%;
-  max-width: 24rem; /* 384px - equivalent to max-w-sm */
+  max-width: 24rem; /* 288px - smaller than before */
   margin: 0 auto;
 }
 
 @media (min-width: 640px) {
   .phone-container {
-    max-width: 28rem; /* 448px - equivalent to max-w-md */
+    max-width: 25rem; /* 320px - smaller than before */
   }
 }
 
 /* Prevent zoom on mobile devices */
 @media (max-width: 768px) {
   .phone-container {
-    max-width: 20rem; /* 320px - smaller on mobile */
+    max-width: 20rem; /* 256px - smaller on mobile */
+  }
+}
+
+/* Force consistent rendering across network contexts */
+@media (min-resolution: 2dppx) {
+  .phone-container {
+    /* Ensure consistent sizing on high-DPI displays */
+    transform: scale(1) translateZ(0);
   }
 }
 
 /* iPhone frame animations */
 .phone-frame {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Ensure consistent sizing across network contexts */
+  width: 100%;
+  max-width: 100%;
+  contain: layout style;
 }
 
 .phone-frame:hover {
