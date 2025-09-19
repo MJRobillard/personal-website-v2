@@ -62,10 +62,10 @@
 .dark {
   /* Dark Mode - Retro Neon Tron */
   --background: #005892; /* Much darker, almost black */
-  --foreground: #BFC5C6; /* Tin Silver */
+  --foreground: #E6E8EA; /* Lighter for stronger contrast */
   --accent: #3C84FF; /* Neon Lapiz */
   --accent-2: #FF7643; /* Molten Copper */
-  --muted: #111111; /* Darker muted */
+  --muted: #0d0f12; /* Slightly lighter than background for separation */
   --bg-secondary: #111111;
   --border-color: rgba(191, 197, 198, 0.2);
   
@@ -80,7 +80,7 @@
   --volcanic-ash: #0a0a0a;
   --verdigris-shadow: #111111;
   --obsidian-gray: #626262;
-  --neon-lapiz: rgb(0, 80, 185);
+  --neon-lapiz: rgb(80, 160, 255); /* brighter link/accent */
   --molten-copper: #FF7643;
   --verdigris-neon: #52C58C;
   --imperial-plum: #D472FF;

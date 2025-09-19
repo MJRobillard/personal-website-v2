@@ -13,9 +13,9 @@ export default function Navbar() {
         
         <ul className="nav-links">
           <li>
-            <a href="#about" className="hover:text-accent transition-colors">
+            <Link href="/about" className="hover:text-accent transition-colors">
               About
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#timeline" className="hover:text-accent transition-colors">

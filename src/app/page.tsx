@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import TechTicker from "../components/TechTicker";
 import PhoneVisual from "../components/PhoneVisual";
 import TimelineSectionItem from "../components/TimelineSectionItem";
@@ -74,6 +75,23 @@ export default function Home() {
       {/* <TechTicker variant="collapsible" /> */}
       {/* <TechTicker variant="dual-layer" /> */}
 
+      {/* Proud Projects Section */}
+      <section className="py-12 bg-background transition-colors duration-300">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="themed-card card-embossed p-6">
+            <h3 className="text-xl font-semibold mb-4 section-title">Some ML, Web Dev, and Salsa projects that I am proud of!</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://q-learner-grid.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary">Q-Learner Grid (Live)</a>
+              <a href="https://pacman-ai-five.vercel.app/multiagent" target="_blank" rel="noopener noreferrer" className="btn-secondary">AI Pacman (Multiagent)</a>
+              <a href="https://musicviz-tan.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-secondary">Music Galaxy (Live)</a>
+              <a href="https://www2.eecs.berkeley.edu/Scheduling/CS/schedule.html" target="_blank" rel="noopener noreferrer" className="btn-secondary">CS198 Schedule</a>
+              <a href="https://fullstackdecal.com/" target="_blank" rel="noopener noreferrer" className="btn-secondary">Fullstack DeCal</a>
+              <a href="https://salsaatcal.com" target="_blank" rel="noopener noreferrer" className="btn-secondary">Salsa at Cal</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="timeline" className="py-20 bg-muted transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -133,7 +151,7 @@ export default function Home() {
 
       <section id="projects" className="py-20 bg-background transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-accent dark:text-accent-2">Featured Project</h2>
+          <h3 className="text-3xl font-semibold text-accent-2 font-mono mb-5 text-center">Featured Project</h3>
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Project Demo - iPhone-like iframe */}
             <div className="order-2 lg:order-1">
@@ -146,7 +164,7 @@ export default function Home() {
             {/* Project Description */}
             <div className="order-1 lg:order-2">
               <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis">
-                <div className="text-sm text-accent-2 font-mono mb-2">FEATURED PROJECT</div>
+                <div className="text-sm text-accent-2 font-mono mb-2"></div>
                 <h3 className="text-2xl font-semibold text-foreground mb-4">Pacman AI Agent</h3>
                 <p className="text-foreground/75 mb-4 text-lg">
                   An application to showcase advanced AI search algorithms through something many know and love: Pacman. 
@@ -246,6 +264,34 @@ export default function Home() {
               </svg>
               <span>Visit Website</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal CTA Section */}
+      <section className="py-20 bg-background transition-colors duration-300">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="rounded-xl overflow-hidden border border-white/15 shadow-xxl">
+              <Image
+                src="/Personal/SALSA2.jpg"
+                alt="Salsa at Cal group"
+                width={1600}
+                height={1200}
+                sizes="(max-width: 1024px) 90vw, 680px"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-3xl font-semibold text-foreground mb-4">I am proudly more than my classwork and tech projects.</h3>
+              <p className="text-lg text-foreground/75 mb-6">Check out a little more about me.</p>
+              <Link href="/about" className="btn-primary inline-flex items-center gap-2">
+                <span>Check out more about me</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
