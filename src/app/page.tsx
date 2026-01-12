@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TechTicker from "../components/TechTicker";
 import PhoneVisual from "../components/PhoneVisual";
+import ComputerVisual from "../components/ComputerVisual";
 import TimelineSectionItem from "../components/TimelineSectionItem";
 
 export default function Home() {
@@ -104,22 +105,6 @@ export default function Home() {
             <div className="timeline-line" aria-hidden="true" />
             <div className="space-y-16">
               <TimelineSectionItem 
-                side="left" 
-                type="data" 
-                year="2025 -" 
-                category="DATA SCIENCE / AI" 
-                title="AONP: Agent-Orchestrated Neutronics Platform" 
-                description="Nuclear researchers spend significant time on monotonous, repetitive simulation tasks that don't leverage their expertise. AONP provides an intelligent multi-agent system that automates the entire simulation workflow through natural language queries. The system uses a LangGraph-based multi-agent orchestration with Router, Studies, Sweep, Query, and Analysis agents that interface with OpenMC simulation engine and MongoDB. Key capabilities include automated configuration generation, provenance tracking with cryptographic hashing, real-time monitoring via SSE, intelligent HDF5 result extraction, parameter sweep orchestration, and RAG-enhanced assistance. Researchers can now submit queries like 'Simulate a PWR pin cell with 4.5% enriched UO2 at 600K' instead of manually creating XML configurations and managing runs." 
-                citations={[ 
-                  { 
-                    id: "1", 
-                    text: "Demo Video: https://www.youtube.com/watch?v=xV2-532odj8 | Repository: github.com/MJRobillard/Hackathon_fusion" 
-                  } 
-                ]} 
-                tags={["LangGraph", "Multi-Agent Systems", "OpenMC", "MongoDB", "Next.js", "Python", "HDF5", "Nuclear Engineering"]} 
-              />
-              
-              <TimelineSectionItem 
                 side="right" 
                 type="data" 
                 year="Summer 2025 -" 
@@ -167,7 +152,82 @@ export default function Home() {
 
       <section id="projects" className="py-20 bg-background transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
-          <h3 className="text-3xl font-semibold text-accent-2 font-mono mb-5 text-center">Featured Project</h3>
+          <h3 className="text-3xl font-semibold text-accent-2 font-mono mb-5 text-center">Featured Projects</h3>
+          
+          {/* AONP Featured Project */}
+          <div className="grid lg:grid-cols-2 gap-10 items-center mb-20">
+            {/* Project Description */}
+            <div className="order-1 lg:order-1">
+              <div className="card-base card-double-gradient card-double-gradient--data data-typography data-emphasis">
+                <div className="text-sm text-accent-2 font-mono mb-2">DATA SCIENCE / AI</div>
+                <h3 className="text-2xl font-semibold text-foreground mb-4">AONP: Agent-Orchestrated Neutronics Platform</h3>
+                <p className="text-foreground/75 mb-4 text-lg">
+                  Nuclear researchers spend significant time on monotonous, repetitive simulation tasks that don&apos;t leverage their expertise. AONP provides an intelligent multi-agent system that automates the entire simulation workflow through natural language queries.
+                </p>
+                <p className="text-foreground/75 mb-4 text-lg">
+                  The system uses a LangGraph-based multi-agent orchestration with Router, Studies, Sweep, Query, and Analysis agents that interface with OpenMC simulation engine and MongoDB. Key capabilities include automated configuration generation, provenance tracking with cryptographic hashing, real-time monitoring via SSE, intelligent HDF5 result extraction, parameter sweep orchestration, and RAG-enhanced assistance.
+                </p>
+                <p className="text-foreground/60 mb-6 italic">
+                  Researchers can now submit queries like &quot;Simulate a PWR pin cell with 4.5% enriched UO2 at 600K&quot; instead of manually creating XML configurations and managing runs.
+                </p>
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-foreground mb-3">Key Capabilities:</h4>
+                  <div className="space-y-2 text-sm text-foreground/75">
+                    <div><strong>Natural Language Interface:</strong> Submit queries in plain English</div>
+                    <div><strong>Automated Configuration:</strong> Agents generate validated OpenMC XML inputs</div>
+                    <div><strong>Provenance Tracking:</strong> Cryptographic hashing ensures reproducibility</div>
+                    <div><strong>Real-Time Monitoring:</strong> Server-Sent Events provide live simulation progress</div>
+                    <div><strong>Intelligent Result Extraction:</strong> Automatic processing of HDF5 outputs</div>
+                    <div><strong>Parameter Sweep Orchestration:</strong> Automated multi-run study execution</div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">LangGraph</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Multi-Agent Systems</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">OpenMC</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">MongoDB</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Next.js</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Python</span>
+                  <span className="px-3 py-1 bg-accent text-white text-xs rounded-full">Nuclear Engineering</span>
+                </div>
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.youtube.com/watch?v=xV2-532odj8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary inline-flex items-center gap-2"
+                  >
+                    <span>Watch Demo</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://github.com/MJRobillard/Hackathon_fusion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary inline-flex items-center gap-2"
+                  >
+                    <span>View Repository</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Demo - Computer visual */}
+            <div className="order-2 lg:order-2">
+              <ComputerVisual
+                src="https://www.youtube.com/embed/xV2-532odj8"
+                title="AONP Demo Video"
+              />
+            </div>
+          </div>
+
+          {/* Pacman AI Featured Project */}
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Project Demo - iPhone-like iframe */}
             <div className="order-2 lg:order-1">
