@@ -104,6 +104,22 @@ export default function Home() {
             <div className="timeline-line" aria-hidden="true" />
             <div className="space-y-16">
               <TimelineSectionItem 
+                side="left" 
+                type="data" 
+                year="2025 -" 
+                category="DATA SCIENCE / AI" 
+                title="AONP: Agent-Orchestrated Neutronics Platform" 
+                description="Nuclear researchers spend significant time on monotonous, repetitive simulation tasks that don't leverage their expertise. AONP provides an intelligent multi-agent system that automates the entire simulation workflow through natural language queries. The system uses a LangGraph-based multi-agent orchestration with Router, Studies, Sweep, Query, and Analysis agents that interface with OpenMC simulation engine and MongoDB. Key capabilities include automated configuration generation, provenance tracking with cryptographic hashing, real-time monitoring via SSE, intelligent HDF5 result extraction, parameter sweep orchestration, and RAG-enhanced assistance. Researchers can now submit queries like 'Simulate a PWR pin cell with 4.5% enriched UO2 at 600K' instead of manually creating XML configurations and managing runs." 
+                citations={[ 
+                  { 
+                    id: "1", 
+                    text: "Demo Video: https://www.youtube.com/watch?v=xV2-532odj8 | Repository: github.com/MJRobillard/Hackathon_fusion" 
+                  } 
+                ]} 
+                tags={["LangGraph", "Multi-Agent Systems", "OpenMC", "MongoDB", "Next.js", "Python", "HDF5", "Nuclear Engineering"]} 
+              />
+              
+              <TimelineSectionItem 
                 side="right" 
                 type="data" 
                 year="Summer 2025 -" 
